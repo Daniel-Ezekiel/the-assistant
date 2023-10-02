@@ -15,7 +15,7 @@ const instructions = {
     "Are you interested in the Github repository for this project? Use this button to navigate to the Github repository.",
 };
 
-const allButtons = document.querySelectorAll("button");
+const allButtons = document.querySelectorAll("a");
 const modelWithTextContainer = document.querySelector(".modelContainer");
 const descriptionText = document.querySelector(".description-text");
 
@@ -26,11 +26,13 @@ const moveModelContainer = (xPos, yPos, height) => {
   modelWithTextContainer.style.left = `${xPos}px`;
   modelWithTextContainer.style.bottom = `unset`;
   modelWithTextContainer.style.right = `unset`;
+  modelWithTextContainer.style.opacity = `1`;
+  // modelWithTextContainer.style.flexDirection = `row`;
   //   modelWithTextContainer.getBoundingClientRect().x = xPos;
 };
 
 allButtons.forEach((button) =>
-  button.addEventListener("click", (e) => {
+  button.addEventListener("mouseover", (e) => {
     e.preventDefault();
     e.stopPropagation();
     const buttonId = e.target.dataset.id;
