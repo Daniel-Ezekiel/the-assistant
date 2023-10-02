@@ -55,10 +55,13 @@ button:hover {
   position: absolute;
   bottom: 0;
   right: 2rem;
+  /* opacity: 0.3; */
 }
 
 .description-text {
   width: 30rem;
+  max-width: 45rem;
+  padding: 2rem;
   background-color: aliceblue;
   padding: 1.2rem;
   border-radius: 2rem;
